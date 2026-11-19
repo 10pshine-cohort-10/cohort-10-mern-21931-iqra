@@ -1,6 +1,9 @@
-
 const mysql = require('mysql2/promise');
 
+/**
+ * MySQL connection pool configuration.
+ * @type {import('mysql2/promise').Pool}
+ */
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
   port: Number(process.env.DB_PORT) || 3306,
